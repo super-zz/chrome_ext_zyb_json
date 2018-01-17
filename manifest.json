@@ -1,0 +1,28 @@
+{  
+  "name": "zyb_json",  
+  "version": "1.0.0",  
+  "description": "zyb_json.",  
+  "manifest_version": 2, 
+  "browser_action": {  
+    "default_icon": "zyb.png"
+  },
+  "content_scripts": [
+    {                 
+      "matches": [
+        "*://127.0.0.1/*"
+      ],
+      "css": [
+        "zyb_json.css"
+      ],
+      "js": [
+        "zyb_json.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [   
+    "cookies",       
+    "notifications"
+  ]
+} 
